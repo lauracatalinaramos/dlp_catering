@@ -1,0 +1,17 @@
+<script>
+  const btn = document.getElementById('nosotros-btn');
+  const info = document.getElementById('nosotros-info');
+
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    info.style.display = info.style.display === 'block' ? 'none' : 'block';
+  });
+
+  // Ocultar si haces clic fuera
+  document.addEventListener('click', function(e) {
+    if (!btn.contains(e.target) && !info.contains(e.target)) {
+      info.style.display = 'none';
+    }
+  });
+</script>
+</body>
